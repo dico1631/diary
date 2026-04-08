@@ -1,0 +1,4 @@
+interface:
+  display_name: "My Diary SDD"
+  short_description: "Use spec-driven development structure for this repository."
+  default_prompt: "Use $life-os-sdd to plan or implement this repository from specs before writing code."

@@ -8,17 +8,47 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#171717",
-        sand: "#f6f0e8",
-        clay: "#c46d3b",
-        moss: "#6d7c5a",
-        sea: "#2f6f72"
+        background: "oklch(var(--background))",
+        foreground: "oklch(var(--foreground))",
+        card: "oklch(var(--card))",
+        "card-foreground": "oklch(var(--card-foreground))",
+        popover: "oklch(var(--popover))",
+        "popover-foreground": "oklch(var(--popover-foreground))",
+        primary: "oklch(var(--primary))",
+        "primary-foreground": "oklch(var(--primary-foreground))",
+        secondary: "oklch(var(--secondary))",
+        "secondary-foreground": "oklch(var(--secondary-foreground))",
+        muted: "oklch(var(--muted))",
+        "muted-foreground": "oklch(var(--muted-foreground))",
+        accent: "oklch(var(--accent))",
+        "accent-foreground": "oklch(var(--accent-foreground))",
+        destructive: "oklch(var(--destructive))",
+        border: "oklch(var(--border))",
+        input: "oklch(var(--input))",
+        ring: "oklch(var(--ring))",
+        want: "oklch(var(--want))",
+        "want-foreground": "oklch(var(--want-foreground))",
+        must: "oklch(var(--must))",
+        "must-foreground": "oklch(var(--must-foreground))",
+        warning: "oklch(var(--warning))",
+        sidebar: {
+          DEFAULT: "oklch(var(--sidebar))",
+          foreground: "oklch(var(--sidebar-foreground))",
+          primary: "oklch(var(--sidebar-primary))",
+          "primary-foreground": "oklch(var(--sidebar-primary-foreground))",
+          accent: "oklch(var(--sidebar-accent))",
+          "accent-foreground": "oklch(var(--sidebar-accent-foreground))",
+          border: "oklch(var(--sidebar-border))",
+          ring: "oklch(var(--sidebar-ring))"
+        }
       },
       fontFamily: {
-        sans: ["'IBM Plex Sans KR'", "system-ui", "sans-serif"]
+        sans: ["'Pretendard Variable'", "Pretendard", "system-ui", "sans-serif"]
       },
-      boxShadow: {
-        soft: "0 16px 40px rgba(23, 23, 23, 0.08)"
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)"
       }
     }
   },

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx next:*)",
+      "WebFetch(domain:ui.shadcn.com)",
+      "Bash(npx shadcn@latest theme --preset bKZTOaNk)",
+      "Bash(node -e ':*)"
+    ]
+  }
+}
