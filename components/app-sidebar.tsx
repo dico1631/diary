@@ -1,17 +1,14 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
-import { Home, PanelLeft, Target } from "lucide-react";
+import { PanelLeft, Target } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 const SIDEBAR_WIDTH = 170;
 const BREAKPOINT = 1024;
 
-const menuItems = [
-  { title: "대시보드", href: "/", icon: Home },
-  { title: "연간 목표", href: "/year-goals", icon: Target },
-];
+const menuItems = [{ title: "연간 목표", href: "/year-goals", icon: Target }];
 
 type SidebarContextType = {
   open: boolean;
@@ -52,14 +49,12 @@ export function SidebarProvider({ children }: { children: React.ReactNode }) {
         <aside
           className={cn(
             "fixed inset-y-0 left-0 z-30 flex flex-col border-r bg-card transition-transform duration-200",
-            isMobile
-              ? open ? "translate-x-0" : "-translate-x-full"
-              : open ? "translate-x-0" : "-translate-x-full"
+            isMobile ? (open ? "translate-x-0" : "-translate-x-full") : open ? "translate-x-0" : "-translate-x-full",
           )}
           style={{ width: SIDEBAR_WIDTH }}
         >
-          <div className="flex h-14 items-center border-b px-4">
-            <p className="text-sm font-semibold">My Diary</p>
+          <div className="flex h-14 items-center px-4">
+            <a href="/" className="text-sm font-semibold hover:text-primary transition-colors">My Diary</a>
           </div>
           <nav className="flex-1 overflow-y-auto p-2">
             <p className="px-3 py-2 text-xs font-medium text-muted-foreground">메뉴</p>

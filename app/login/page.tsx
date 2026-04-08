@@ -1,8 +1,7 @@
-import Link from "next/link";
 import { redirect } from "next/navigation";
 import { AuthForm } from "@/components/auth-form";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -75,12 +74,9 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
 
           <Separator className="my-6" />
 
-          <Link
-            className="inline-flex text-sm font-medium text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
-            href="/signup"
-          >
+          <Button variant="link" className="px-0" render={<a href="/signup" />}>
             계정이 없으신가요? 회원가입
-          </Link>
+          </Button>
         </CardContent>
       </Card>
     </main>

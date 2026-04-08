@@ -1,8 +1,7 @@
-import Link from "next/link";
 import { redirect } from "next/navigation";
 import { SignupForm } from "@/components/signup-form";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -72,12 +71,9 @@ export default async function SignupPage({ searchParams }: SignupPageProps) {
 
           <Separator className="my-6" />
 
-          <Link
-            className="inline-flex text-sm font-medium text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
-            href="/login"
-          >
+          <Button variant="link" className="px-0" render={<a href="/login" />}>
             이미 계정이 있으신가요? 로그인
-          </Link>
+          </Button>
         </CardContent>
       </Card>
     </main>
